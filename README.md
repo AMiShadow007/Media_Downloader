@@ -20,7 +20,7 @@ If the script doesn't run or Windows says `python` is not found:
 
 #### Step 1: Open CMD (Command Prompt) as Admin
 
-1. Right-click the **Start menu** and select **Terminal (Admin)** or **CMD (Admin)** or **Command Prompt (Admin)**
+1. Right-click the **Start menu** and select **Terminal (Admin)** or **CMD (Admin)**
 ![How to run CMD as Admin][run-cmd-admin]
 
 2. Click **Yes** if asked for permission
