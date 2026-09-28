@@ -14,43 +14,43 @@ Images are renamed as `.csv file link source`.
 5. Drag and drop the CSV file on top of the `Image_Downloader.py`
 ![Fig. 1: windows image download][windows-image-download-script]
 
-### Windows troubleshooting
+### Windows troubleshooting (first-time users)
 
-If Windows says `python` or `py` is not recognized, or opens the Microsoft Store, try this:
+If Windows says `python` is not recognized, or opens the Microsoft Store, then Python is not set up correctly.
 
-1. Open **Command Prompt**.
-2. Run:
+Try this in **Command Prompt**:
 
 ```bat
 python --version
 py --version
-where python
-where py
 ```
 
-If these commands fail, install Python from [python.org](https://www.python.org/downloads/windows/) and make sure **Add python.exe to PATH** is checked.
+If both fail, install Python from [python.org](https://www.python.org/downloads/windows/). During install, check **Add python.exe to PATH**.
 
-Then use:
+Then run the script like this:
 
 ```bat
 py -3 Image_Downloader.py scraped_data.csv
 ```
 
-If your script and CSV file are in a different folder, first change to that folder:
+If your script and CSV file are in another folder, first go there:
 
 ```bat
 cd /d C:\Users\YourName\Downloads
 py -3 Image_Downloader.py scraped_data.csv
 ```
 
-#### Common Windows issues
+#### Common beginner fixes
 
-- `python` works but `py` does not: reinstall Python and include the launcher.
-- Python opens the Microsoft Store: disable the App execution alias for `python.exe` and `python3.exe` in Windows settings.
-- Multiple Python versions are installed: use `py -3` to force Python 3.
-- Python is missing from PATH: reinstall Python and enable **Add python.exe to PATH**.
+- Python opens the Microsoft Store: turn off the **App execution alias** for `python.exe` in Windows settings.
+- Python is installed but not found: reinstall Python and keep **Add python.exe to PATH** checked.
+- More than one Python version is installed: use `py -3` to force Python 3.
 
-For most users, the easiest fix is to install Python from python.org and run the script with:
+For most first-time users, this is the easiest solution:
+
+1. Install Python from python.org
+2. Check **Add python.exe to PATH**
+3. Run:
 
 ```bat
 py -3 Image_Downloader.py scraped_data.csv
