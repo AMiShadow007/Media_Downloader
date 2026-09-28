@@ -43,15 +43,18 @@ If it says `python is not recognized`, reinstall Python:
 5. Click **Install Now**
 6. Close and reopen CMD as Admin, then run `python --version` again
 
-#### Step 3: Run the Script
-In CMD, navigate to where your script and CSV file are:
+#### Step 3: Go to where your script & CSV file are > Run the Script In CMD.
+
+or
+
+#### Assuming files are in Downloads > Run the Script In CMD:
 
 ```bat
 cd C:\Users\YourName\Downloads
 py -3 Image_Downloader.py scraped_data.csv
 ```
 
-Replace `YourName` with your Windows username and the file paths with your actual locations.
+Replace `YourName` with your Windows username and the file paths with your actual file path location.
 
 #### Still having issues?
 
@@ -69,7 +72,7 @@ Replace `YourName` with your Windows username and the file paths with your actua
 5. Save the CSV file in `Downloads` directory
 6. Edit CSV file so that, CSV file has no `Serial column` or `Header row`. Only `Link column` is present
 7. Open `Terminal` application. You should have one pre-installed
-8. Change working PATH to `Downloads` directory by typing:
+8. Change working PATH to `Downloads` directory typing:
     ```bash
     cd Downloads
     ```
