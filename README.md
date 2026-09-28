@@ -19,9 +19,10 @@ Images are renamed as `.csv file link source`.
 If the script doesn't run or Windows says `python` is not found:
 
 #### Step 1: Open CMD (Command Prompt) as Admin
-![How to run CMD as Admin][run-cmd-admin]
 
 1. Right-click the **Start menu** and select **Terminal (Admin)** or **CMD (Admin)** or **Command Prompt (Admin)**
+![How to run CMD as Admin][run-cmd-admin]
+
 2. Click **Yes** if asked for permission
 
 #### Step 2: Check Python
