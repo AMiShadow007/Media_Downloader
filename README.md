@@ -14,47 +14,50 @@ Images are renamed as `.csv file link source`.
 5. Drag and drop the CSV file on top of the `Image_Downloader.py`
 ![Fig. 1: windows image download][windows-image-download-script]
 
-### Windows troubleshooting (first-time users)
+### Windows troubleshooting
 
-If Windows says `python` is not recognized, or opens the Microsoft Store, then Python is not set up correctly.
+If the script doesn't run or Windows says `python` is not found:
 
-Try this in **Command Prompt**:
+#### Step 1: Open CMD (Command Prompt) as Admin
+![How to run CMD as Admin][run-cmd-admin]
+
+1. Right-click the **Start menu** and select **Terminal (Admin)** or **Command Prompt (Admin)**
+2. Click **Yes** if asked for permission
+
+#### Step 2: Check Python
+In the CMD window, type:
 
 ```bat
 python --version
-py --version
 ```
 
-If both fail, install Python from [python.org](https://www.python.org/downloads/windows/). During install, check **Add python.exe to PATH**.
+If it shows a Python 3 version, Python is installed correctly. Skip to Step 3.
 
-Then run the script like this:
+If it says `python is not recognized`, reinstall Python:
+
+1. Go to [python.org/downloads](https://www.python.org/downloads/windows/)
+2. Download the latest Python 3.x installer
+3. Run the installer
+4. **IMPORTANT:** Check the box **Add python.exe to PATH**
+![Python PATH install option][python-path-install]
+5. Click **Install Now**
+6. Close and reopen CMD as Admin, then run `python --version` again
+
+#### Step 3: Run the Script
+In CMD, navigate to where your script and CSV file are:
 
 ```bat
+cd C:\Users\YourName\Downloads
 py -3 Image_Downloader.py scraped_data.csv
 ```
 
-If your script and CSV file are in another folder, first go there:
+Replace `YourName` with your Windows username and the file paths with your actual locations.
 
-```bat
-cd /d C:\Users\YourName\Downloads
-py -3 Image_Downloader.py scraped_data.csv
-```
+#### Still having issues?
 
-#### Common beginner fixes
-
-- Python opens the Microsoft Store: turn off the **App execution alias** for `python.exe` in Windows settings.
-- Python is installed but not found: reinstall Python and keep **Add python.exe to PATH** checked.
-- More than one Python version is installed: use `py -3` to force Python 3.
-
-For most first-time users, this is the easiest solution:
-
-1. Install Python from python.org
-2. Check **Add python.exe to PATH**
-3. Run:
-
-```bat
-py -3 Image_Downloader.py scraped_data.csv
-```
+- Python opens the Microsoft Store: Disable the App alias in **Settings > Apps > App execution aliases** and turn off `python.exe` and `python3.exe`
+- Multiple Python versions installed: Use `py -3` instead of `python`
+- Permission denied error: Make sure you opened CMD as **Admin**
 
 ### macOS, Linux usage
 
@@ -78,5 +81,7 @@ py -3 Image_Downloader.py scraped_data.csv
 ![Fig. 2: macOS image download][osx-image-download-script]
 
  [windows-image-download-script]: Tutorials/Windows_Tutorial.gif?raw=true
+ [run-cmd-admin]: Tutorials/Run_CMD_Admin.gif?raw=true
+ [python-path-install]: Tutorials/Python_PATH.gif?raw=true
  [osx-image-download-script]: Tutorials/OSX_Tutorial.gif?raw=true
  [Image_Downloader]: https://github.com/amiMohammad/Image_Downloader/releases
