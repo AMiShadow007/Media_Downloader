@@ -22,12 +22,13 @@ Images are renamed as `.csv file link source`.
 3. Move `Image_Downloader.py` to `Downloads` directory
 4. Scrape the target site and export data in CSV format
 5. Save the CSV file in `Downloads` directory
-6. Open `Terminal` application. You should have one pre-installed
-7. Change working PATH to `Downloads` directory by typing:
+6. Edit CSV file so that, CSV file has no `Serial column` or `Header row`. Only `Link column` is present
+7. Open `Terminal` application. You should have one pre-installed
+8. Change working PATH to `Downloads` directory by typing:
     ```bash
     cd Downloads
     ```
-8. Run image downloader script by typing:
+9. Run image downloader script by typing:
     ````bash
     python Image_Downloader scraped_data.csv
     ````
