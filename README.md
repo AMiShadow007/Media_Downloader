@@ -21,7 +21,7 @@ If the script doesn't run or Windows says `python` is not found:
 #### Step 1: Open CMD (Command Prompt) as Admin
 ![How to run CMD as Admin][run-cmd-admin]
 
-1. Right-click the **Start menu** and select **Terminal (Admin)** or **Command Prompt (Admin)**
+1. Right-click the **Start menu** and select **Terminal (Admin)** or **CMD (Admin)** or **Command Prompt (Admin)**
 2. Click **Yes** if asked for permission
 
 #### Step 2: Check Python
@@ -81,7 +81,7 @@ Replace `YourName` with your Windows username and the file paths with your actua
 ![Fig. 2: macOS image download][osx-image-download-script]
 
  [windows-image-download-script]: Tutorials/Windows_Tutorial.gif?raw=true
- [run-cmd-admin]: Tutorials/Run_CMD_Admin.gif?raw=true
- [python-path-install]: Tutorials/Python_PATH.gif?raw=true
+ [run-cmd-admin]: Tutorials/CMD_as_Admin.webp?raw=true
+ [python-path-install]: Tutorials/Python_vs_Java.gif?raw=true
  [osx-image-download-script]: Tutorials/OSX_Tutorial.gif?raw=true
  [Image_Downloader]: https://github.com/amiMohammad/Image_Downloader/releases
