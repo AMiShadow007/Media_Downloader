@@ -30,7 +30,7 @@ If the script doesn't run or Windows says `python is not recognized or found`:
 ```bat
 python --version
 ```
-Press Enter
+Press `Enter`
 
 If it shows a Python 3 version, Python is installed correctly. Skip to Step 3.
 
