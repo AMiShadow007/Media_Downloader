@@ -20,13 +20,12 @@ If the script doesn't run or Windows says `python` is not found:
 
 #### Step 1: Open CMD (Command Prompt) as Admin
 
-1. Right-click the **Start menu** and select **Terminal (Admin)** or **CMD (Admin)**
+1. Right-click the **Start menu** and select `CMD (Admin)` or `Terminal (Admin)`
 ![How to run CMD as Admin][run-cmd-admin]
 
-2. Click **Yes** if asked for permission
+2. Click `Yes*` if asked for permission
 
-#### Step 2: Check Python
-In the CMD window, type:
+#### Step 2: Check Python In the CMD window, type:
 
 ```bat
 python --version
@@ -39,9 +38,9 @@ If it says `python is not recognized`, reinstall Python:
 1. Go to [python.org/downloads](https://www.python.org/downloads/windows/)
 2. Download the latest Python 3.x installer
 3. Run the installer
-4. **IMPORTANT:** Check the box **Add python.exe to PATH**
+4. **IMPORTANT:** Check the box `Add python.exe to PATH`
 ![Python PATH install option][python-path-install]
-5. Click **Install Now**
+5. Click `Install Now`
 6. Close and reopen CMD as Admin, then run `python --version` again
 
 #### Step 3: Go to where your script & CSV file are > Run the Script In CMD.
@@ -55,7 +54,7 @@ cd C:\Users\YourName\Downloads
 py -3 Image_Downloader.py scraped_data.csv
 ```
 
-Replace `YourName` with your Windows username and the file paths with your actual file path location.
+Replace `YourName` with your `Windows username` and the file paths with your `actual file location` (ex; Downloads, Desktop....).
 
 #### Still having issues?
 
@@ -74,10 +73,11 @@ Replace `YourName` with your Windows username and the file paths with your actua
 6. Edit CSV file so that, CSV file has no `Serial column` or `Header row`. Only `Link column` is present
 7. Open `Terminal` application. You should have one pre-installed
 8. Change working PATH to `Downloads` directory typing:
+
     ```bash
     cd Downloads
     ```
-9. Run image downloader script by typing:
+10. Run image downloader script by typing:
     ````bash
     python Image_Downloader scraped_data.csv
     ````
