@@ -16,14 +16,14 @@ Images are renamed as `.csv file link source`.
 
 ### Windows troubleshooting
 
-If the script doesn't run or Windows says `python` is not found:
+If the script doesn't run or Windows says `python is not recognized or found`:
 
-#### Step 1: Open CMD (Command Prompt) as Admin
+#### Step 1: Open `CMD (Run as administrator)`
 
-1. Right-click the **Start menu** and select `CMD (Admin)` or `Terminal (Admin)`
+1. Right-click the `Start menu` and select `CMD (Run as administrator)` or `Terminal (Admin)`
 ![How to run CMD as Admin][run-cmd-admin]
 
-2. Click `Yes*` if asked for permission
+2. Click `Yes` if asked for permission
 
 #### Step 2: Check Python In the CMD window, type:
 
