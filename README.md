@@ -36,7 +36,7 @@ If it shows a Python 3 version, Python is installed correctly. Skip to Step 3.
 If it says `python is not recognized`, reinstall Python:
 
 1. Go to [python.org/downloads](https://www.python.org/downloads/windows/)
-2. Download the latest Python 3.x installer
+2. Download the latest `Python 3.x installer`
 3. Run the installer
 4. **IMPORTANT:** Check the box `Add python.exe to PATH`
 ![Python PATH install option][python-path-install]
