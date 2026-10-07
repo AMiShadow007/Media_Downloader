@@ -45,45 +45,87 @@ def fix_url(url):
     return url
 
 
+def get_file_extension(content_type):
+    """
+    Maps MIME types to file extensions.
+    Supports images, audio, and video formats.
+    """
+    mime_to_ext = {
+        # Image formats
+        'image/jpeg': 'jpg',
+        'image/jpg': 'jpg',
+        'image/png': 'png',
+        'image/gif': 'gif',
+        'image/webp': 'webp',
+        
+        # Audio formats
+        'audio/mpeg': 'mp3',
+        'audio/mp3': 'mp3',
+        'audio/mp4': 'm4a',
+        'audio/x-m4a': 'm4a',
+        'audio/x-wav': 'wav',
+        'audio/wav': 'wav',
+        'audio/midi': 'midi',
+        'audio/x-midi': 'midi',
+        
+        # Video formats
+        'video/mp4': 'mp4',
+        'video/x-msvideo': 'avi',
+        'video/avi': 'avi',
+        'video/x-matroska': 'mkv',
+        'video/quicktime': 'mkv',
+        'video/mp2t': 'ts',
+        'video/x-mpts': 'ts',
+    }
+    
+    return mime_to_ext.get(content_type, None)
+
+
 def download_csv_row_images(row, dest_dir):
     for key in row:
         start_url = row.get('web-scraper-start-url', '')
         id = row.get('web-scraper-order', '')
 
         if key.endswith("-src"):
-            image_url = row[key]
-            image_url = urljoin(start_url, image_url)
+            file_url = row[key]
+            file_url = urljoin(start_url, file_url)
 
-            original_filename = os.path.basename(image_url)
-            image_filename = os.path.splitext(original_filename)[0]
-            download_image(image_url, dest_dir, image_filename)
+            original_filename = os.path.basename(file_url)
+            file_filename = os.path.splitext(original_filename)[0]
+            download_file(file_url, dest_dir, file_filename)
 
 
-def download_image(image_url, dest_dir, image_filename):
-
-    image_url = fix_url(image_url)
+def download_file(file_url, dest_dir, file_filename):
+    """
+    Downloads media files (images, audio, and video).
+    Supports jpg, jpeg, png, webp, gif, mp3, m4a, midi, wav, mp4, mkv, avi, ts.
+    """
+    file_url = fix_url(file_url)
 
     try:
-        logging.info("downloading image %s" % image_url)
-        tmp_file_name, headers = urlretrieve(image_url)
+        logging.info("downloading file %s" % file_url)
+        tmp_file_name, headers = urlretrieve(file_url)
         content_type = headers.get("Content-Type")
 
-        if content_type == 'image/jpeg' or content_type == 'image/jpg':
-            ext = 'jpg'
-        elif content_type == 'image/png':
-            ext = 'png'
-        elif content_type == 'image/gif':
-            ext = 'gif'
-        elif content_type == 'image/webp':
-            ext = 'webp'
-        else:
-            logging.warning("unknown image content type %s" % content_type)
+        # Get extension based on content type
+        ext = get_file_extension(content_type)
+        
+        if ext is None:
+            logging.warning("unknown file content type %s" % content_type)
             return
 
-        image_path = os.path.join(dest_dir, image_filename+"."+ext)
-        shutil.move(tmp_file_name, image_path)
+        file_path = os.path.join(dest_dir, file_filename + "." + ext)
+        shutil.move(tmp_file_name, file_path)
+        logging.info("successfully downloaded %s" % file_path)
+        
     except Exception as e:
-        logging.warning("Image download error. %s" % e)
+        logging.warning("File download error. %s" % e)
+
+
+# Keep the old function name for backward compatibility
+def download_image(image_url, dest_dir, image_filename):
+    download_file(image_url, dest_dir, image_filename)
+
 
 def get_csv_image_dir(csv_filename):
 
@@ -149,7 +191,7 @@ def main(args):
 
     if csv_filename:
         download_csv_file_images(csv_filename)
-        logging.info("image download completed")
+        logging.info("media download completed")
     else:
         logging.warning("no valid input file found")
 
