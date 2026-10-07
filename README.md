@@ -1,17 +1,17 @@
 # Image Downloader
 
-Image downloader python script finds image URLs scraped by Image Selector in a CSV file and downloads them.
-Images are renamed as `.csv file link source`.
+Media_Downloader python script finds image, audio and videos URLs scraped by file type Selector in a CSV file and downloads them.
+Files are nemed/renamed as `.csv file link source`.
 
 ### Windows usage
 
 1. Download & install python 3.x from:
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
-2. Download `Image-Downloader.py` script from:
-[https://github.com/amiMohammad/Image_Downloader][Image_Downloader]
+2. Download `Media_Downloader.py` script from:
+[https://github.com/AMiShadow007/Media_Downloader][Media_Downloader]
 3. Scrape the target site and export data as CSV file
 4. Edit CSV file so that, CSV file has no `Serial column` or `Header row`. Only `Link column` is present
-5. Drag and drop the CSV file on top of the `Image_Downloader.py`
+5. Drag and drop the CSV file on top of the `Media_Downloader.py`
 ![Fig. 1: windows image download][windows-image-download-script]
 
 ### Windows troubleshooting
@@ -52,7 +52,7 @@ or
 
 ```bat
 cd C:\Users\YourName\Downloads
-py -3 Image_Downloader.py scraped_data.csv
+py -3 Media_Downloader.py scraped_data.csv
 ```
 
 Replace `YourName` with your `Windows username` and the file paths with your `actual file location` (ex; Downloads, Desktop....).
@@ -66,21 +66,21 @@ Replace `YourName` with your `Windows username` and the file paths with your `ac
 ### macOS, Linux usage
 
 1. Install python if necessary through your package manager. Most likely you already have it pre-installed.
-2. Download `Image_Downloader.py` script from here:
-[https://github.com/amiMohammad/Image_Downloader][Image_Downloader]
-3. Move `Image_Downloader.py` to `Downloads` directory
+2. Download `Media_Downloader.py` script from here:
+[https://github.com/AMiShadow007/Media_Downloader][Media_Downloader]
+3. Move `Media_Downloader.py` to `Downloads` directory
 4. Scrape the target site and export data as CSV file
 5. Save the CSV file in `Downloads` directory
 6. Edit CSV file so that, CSV file has no `Serial column` or `Header row`. Only `Link column` is present
 7. Open `Terminal` application. You should have one pre-installed
-8. Change working PATH to `Downloads` directory typing:
+8. Change working PATH to `Downloads` directory by typing:
 
     ```bash
     cd Downloads
     ```
 10. Run image downloader script by typing:
     ````bash
-    python Image_Downloader scraped_data.csv
+    python Media_Downloader scraped_data.csv
     ````
 
 ![Fig. 2: macOS image download][osx-image-download-script]
@@ -89,4 +89,4 @@ Replace `YourName` with your `Windows username` and the file paths with your `ac
  [run-cmd-admin]: Tutorials/CMD_as_Admin.webp?raw=true
  [python-path-install]: Tutorials/Python_vs_Java.gif?raw=true
  [osx-image-download-script]: Tutorials/OSX_Tutorial.gif?raw=true
- [Image_Downloader]: https://github.com/amiMohammad/Image_Downloader/releases
+ [Media_Downloader]: https://github.com/AMiShadow007/Media_Downloader/releases
