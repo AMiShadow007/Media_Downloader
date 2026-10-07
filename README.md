@@ -1,4 +1,4 @@
-# Image Downloader
+# Media_Downloader
 
 Media_Downloader python script finds image, audio and videos URLs scraped by file type Selector in a CSV file and downloads them.
 Files are nemed/renamed as `.csv file link source`.
